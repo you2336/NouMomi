@@ -35,7 +35,7 @@ class Result_State extends State<Result> {
                   width: double.infinity,
                   height: 200,
                   alignment: Alignment.center,
-                  color: Color(0xFFf4b183),
+                  color: Color(mode_Color[mode]),
                   child: Text(
                       "${mode_kanji[mode]}ＲＵＳＨ${count_limit.toString()}問")),
               Container(
@@ -55,7 +55,7 @@ class Result_State extends State<Result> {
           Navigator.push(
               context, MaterialPageRoute(builder: (context) => MyApp()));
         },
-        child: Text('スタート'),
+        child: Text('タイトルに戻る'),
         style: ElevatedButton.styleFrom(
             minimumSize: Size(700, 100), shape: RoundedRectangleBorder()));
 

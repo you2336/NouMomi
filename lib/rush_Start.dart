@@ -27,7 +27,7 @@ button_push(int num) {
     bnt10 = offButtonColor;
     bnt20 = offButtonColor;
     bnt30 = onButtonColor;
-  }
+  } //花王
 }
 
 class Rush_Start extends StatefulWidget {
