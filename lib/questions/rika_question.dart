@@ -1,4 +1,4 @@
-Map kagaku_question = {
+Map rika_question = {
   1: {
     "question": "空気中の約78％を占める気体は？",
     "choices": {

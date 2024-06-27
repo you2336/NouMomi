@@ -1,7 +1,7 @@
 import 'package:project1/rush.dart';
 import 'package:project1/questions/jukugo_question.dart';
 import 'package:project1/questions/anzan_question.dart';
-import 'package:project1/questions/kagaku_question.dart';
+import 'package:project1/questions/rika_question.dart';
 import 'package:project1/questions/shakai_question.dart';
 import 'dart:math' as math;
 
@@ -15,7 +15,7 @@ Map mode_Color = {
 Map mode_kanji = {
   "jukugo": "熟語読み",
   "anzan": "連続暗算",
-  "kagaku": "科学知識",
+  "kagaku": "理科知識",
   "shakai": "社会知識",
 };
 int count_now = 0; //今の回答数
@@ -31,7 +31,7 @@ void map_Init() {
     question_Map = anzan_question;
   }
   if (mode == "kagaku") {
-    question_Map = kagaku_question;
+    question_Map = rika_question;
   }
   if (mode == "shakai") {
     question_Map = shakai_question;
