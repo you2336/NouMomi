@@ -53,7 +53,12 @@ class Rush_StartState extends State<Rush_Start> {
       alignment: Alignment.center,
       width: double.infinity,
       color: Color(mode_Color[mode]),
-      child: Text('${mode_kanji[mode]}ＲＵＳＨ'),
+      child: Text(
+        '${mode_kanji[mode]}ＲＵＳＨ',
+        style: TextStyle(
+          fontFamily: 'MPLUSRounded1c',
+        ),
+      ),
     );
 
     final difficultButton = Flexible(

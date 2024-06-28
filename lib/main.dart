@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:project1/game_Select.dart';
 import 'package:project1/rush_Control.dart';
+import 'package:audioplayers/audioplayers.dart';
 
 void main() {
   runApp(MyApp());
@@ -10,12 +11,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        fontFamily: 'MPLUSRounded1c',
+      ),
       home: MyHomePage(),
     );
   }
 }
 
 class MyHomePage extends StatelessWidget {
+  final audioPlayer = AudioPlayer();
   void test_function() {
     print('記録閲覧ボタンが押されました');
   }
@@ -24,6 +30,8 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     final button_Start = ElevatedButton(
       onPressed: () {
+        audioPlayer.play((AssetSource("sounds/ガロ保留音（赤）.mp3")));
+        // audioPlayer.play((UrlSource("https://www.youtube.com/watch?v=oQ-YUfwX6ag")));
         init();
         Navigator.push(
           context,
@@ -56,11 +64,19 @@ class MyHomePage extends StatelessWidget {
     final main_Column = Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
+        Padding(
+            padding: EdgeInsets.symmetric(vertical: 2),
+            child: Text(
+              'の う も み',
+              style: TextStyle(fontSize: 150),
+              textAlign: TextAlign.center,
+            )),
         Text(
-          'クイズ　のうもみ',
-          style: TextStyle(fontSize: 100),
+          '~ 脳力アップちゃれんじ ~\n',
+          style: TextStyle(fontSize: 50),
           textAlign: TextAlign.center,
         ),
+        SizedBox(height: 60),
         sub_Column,
       ],
     );
