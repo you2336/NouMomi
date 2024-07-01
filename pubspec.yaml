@@ -93,6 +93,15 @@ flutter:
         - asset: assets/fonts/MPLUSRounded1c-Black.ttf
         - asset: assets/fonts/MPLUSRounded1c-Bold.ttf
         - asset: assets/fonts/MPLUSRounded1c-ExtraBold.ttf
+    - family: KleeOne
+      fonts:
+        - asset: assets/fonts/KleeOne-SemiBold.ttf
+    - family: ShipporiAntique
+      fonts:
+        - asset: assets/fonts/ShipporiAntique-Regular.ttf
+    - family: KaiseiOpti
+      fonts:
+        - asset: assets/fonts/KaiseiOpti-Bold.ttf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

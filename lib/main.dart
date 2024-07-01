@@ -1,3 +1,5 @@
+import 'dart:ui_web';
+
 import 'package:flutter/material.dart';
 import 'package:project1/game_Select.dart';
 import 'package:project1/rush_Control.dart';
@@ -13,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        fontFamily: 'MPLUSRounded1c',
+        fontFamily: 'KleeOne',
       ),
       home: MyHomePage(),
     );
@@ -30,69 +32,92 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     final button_Start = ElevatedButton(
       onPressed: () {
-        audioPlayer.play((AssetSource("sounds/ガロ保留音（赤）.mp3")));
-        // audioPlayer.play((UrlSource("https://www.youtube.com/watch?v=oQ-YUfwX6ag")));
+        // audioPlayer.play((AssetSource("sounds/...")));
         init();
         Navigator.push(
           context,
           MaterialPageRoute(builder: (context) => Game_Select()),
         );
       },
-      child: Text('スタート'),
+      child: Text('スタート',
+          textScaleFactor: 3.0,
+          style: TextStyle(
+            color: Color.fromARGB(255, 70, 70, 70),
+          )),
       style: ElevatedButton.styleFrom(
+        backgroundColor: Color.fromARGB(255, 249, 216, 173),
         minimumSize: Size(700, 150),
-        shape: RoundedRectangleBorder(),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(30),
+        ),
       ),
     );
-
     final button_Record = ElevatedButton(
       onPressed: test_function,
-      child: Text('記録閲覧'),
+      child: Text('記録閲覧',
+          textScaleFactor: 3.0,
+          style: TextStyle(
+            color: Color.fromARGB(255, 70, 70, 70),
+          )),
       style: ElevatedButton.styleFrom(
+        backgroundColor: Color.fromARGB(255, 206, 244, 255),
         minimumSize: Size(700, 150),
-        shape: RoundedRectangleBorder(),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(30),
+        ),
       ),
     );
 
     final sub_Column = Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         button_Start,
+        SizedBox(
+          height: 50,
+        ),
         button_Record,
       ],
     );
 
     final main_Column = Column(
-      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.end,
       children: [
-        Padding(
-            padding: EdgeInsets.symmetric(vertical: 2),
-            child: Text(
-              'の う も み',
-              style: TextStyle(fontSize: 150),
-              textAlign: TextAlign.center,
-            )),
-        Text(
-          '~ 脳力アップちゃれんじ ~\n',
-          style: TextStyle(fontSize: 50),
-          textAlign: TextAlign.center,
+        Expanded(
+          flex: 4,
+          child: Container(
+              //margin: const EdgeInsets.only(top: 20, left: 20, right: 20),
+              child: Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Text(
+                'の う も み',
+                style: TextStyle(fontSize: 150),
+                textAlign: TextAlign.center,
+              ),
+              Text(
+                '~ 脳力アップちゃれんじ ~\n',
+                style: TextStyle(fontSize: 50),
+                textAlign: TextAlign.center,
+              ),
+            ],
+          )),
         ),
-        SizedBox(height: 60),
-        sub_Column,
+
+        //SizedBox(height: 50),
+        Expanded(flex: 4, child: sub_Column),
       ],
     );
 
-    final main_Container = Container(
-      // decoration: BoxDecoration(
-      //     image: DecorationImage(
-      //   image: AssetImage('assets/images/a.png'),
-      //   fit: BoxFit.fill,
-      // )),
-      child: main_Column,
-      padding: EdgeInsets.all(16.0),
-    );
+    final main_Container = main_Column;
 
     return Scaffold(
-      body: Center(child: main_Container),
+      body: Center(child: LayoutBuilder(
+          builder: (BuildContext context, BoxConstraints constrains) {
+        return Container(
+            width: constrains.maxWidth,
+            height: constrains.maxHeight,
+            child: main_Container);
+      })),
     );
   }
 }
