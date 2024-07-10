@@ -63,31 +63,38 @@ class Rush_State extends State<Rush> {
         flex: 1,
         child: Container(
             child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          //mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Container(
-                width: double.infinity,
-                height: 200,
-                alignment: Alignment.center,
-                color: Color(mode_Color[mode]),
-                child: Text(
-                  "第${count_now + 1}問",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 50,
-                  ),
-                )),
-            Container(
-                alignment: Alignment.center,
-                width: double.infinity,
-                height: 600,
-                child: Text(
-                  question_Map[question_Order[count_now]]?["question"],
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 40,
-                  ),
-                )),
+            Expanded(
+              flex: 3,
+              child: Container(
+                  width: double.infinity,
+                  // height: 200,
+                  alignment: Alignment.center,
+                  color: Color(mode_Color[mode]),
+                  child: Text(
+                    "第${count_now + 1}問",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 50,
+                    ),
+                  )),
+            ),
+            Expanded(
+              flex: 7,
+              child: Container(
+                  alignment: Alignment.center,
+                  width: double.infinity,
+                  //color: Color(mode_Color[mode]),
+                  //height: 600,
+                  child: Text(
+                    question_Map[question_Order[count_now]]?["question"],
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 30,
+                    ),
+                  )),
+            ),
           ],
         )));
 
@@ -157,10 +164,10 @@ class Rush_State extends State<Rush> {
             child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  choices1,
-                  choices2,
-                  choices3,
-                  choices4,
+                  Flexible(child: choices1),
+                  Flexible(child: choices2),
+                  Flexible(child: choices3),
+                  Flexible(child: choices4),
                 ]),
           )),
     );

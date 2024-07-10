@@ -42,15 +42,12 @@ class Result_State extends State<Result> {
                   child: Column(
                 children: [
                   Text(
-                    """正解率\n
-                  $score_Count問／$count_limit問\n
-                  $score_Percent%\n
-                  \n
-                  お疲れさまでした。\n\n\n""",
+                    "正解率\n\n$score_Count問／$count_limit問\n\n$score_Percent%\n\n\nお疲れさまでした。\n\n\n",
                     style: TextStyle(
                       color: Colors.black,
                       fontSize: 40,
                     ),
+                    textAlign: TextAlign.center,
                   ),
                 ],
               ))
@@ -61,7 +58,13 @@ class Result_State extends State<Result> {
           Navigator.push(
               context, MaterialPageRoute(builder: (context) => MyApp()));
         },
-        child: Text('タイトルに戻る'),
+        child: Text(
+          'タイトルに戻る ',
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: 40,
+          ),
+        ),
         style: ElevatedButton.styleFrom(
             minimumSize: Size(700, 100), shape: RoundedRectangleBorder()));
 
