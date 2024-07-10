@@ -1,6 +1,6 @@
 // https://web.quizknock.com/mental-arithmetic-way
 
-Map anzan_question = {
+Map keisan_question = {
   1: {
     "question": "7×8=",
     "choices": {

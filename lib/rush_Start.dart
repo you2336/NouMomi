@@ -3,6 +3,22 @@ import 'package:project1/game_Select.dart';
 import 'package:project1/rush.dart';
 import 'package:project1/rush_Control.dart';
 
+void main() {
+  runApp(RushStart());
+}
+
+class RushStart extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      theme: ThemeData(
+        fontFamily: 'KleeOne',
+      ),
+      home: Game_Select(),
+    );
+  }
+}
+
 var list = [];
 var button_List = [true, false, false];
 Color onButtonColor = Color.fromARGB(102, 240, 240, 240);
@@ -56,7 +72,8 @@ class Rush_StartState extends State<Rush_Start> {
       child: Text(
         '${mode_kanji[mode]}ＲＵＳＨ',
         style: TextStyle(
-          fontFamily: 'MPLUSRounded1c',
+          fontFamily: 'KleeOne',
+          color: Colors.black,
         ),
       ),
     );

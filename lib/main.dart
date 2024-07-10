@@ -1,5 +1,4 @@
 import 'dart:ui_web';
-
 import 'package:flutter/material.dart';
 import 'package:project1/game_Select.dart';
 import 'package:project1/rush_Control.dart';
@@ -33,7 +32,7 @@ class MyHomePage extends StatelessWidget {
     final button_Start = ElevatedButton(
       onPressed: () {
         // audioPlayer.play((AssetSource("sounds/...")));
-        init();
+
         Navigator.push(
           context,
           MaterialPageRoute(builder: (context) => Game_Select()),

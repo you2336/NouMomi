@@ -3,7 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:project1/game_Select.dart';
 import 'package:project1/result.dart';
 import 'package:project1/rush_Start.dart';
-import 'package:project1/questions/jukugo_question.dart';
+//import 'package:project1/questions/juk_question.dart';
 import 'package:project1/rush_Control.dart';
 
 // rush_Controlから問題のmapを受け取り、

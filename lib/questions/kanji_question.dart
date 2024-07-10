@@ -1,4 +1,4 @@
-Map jukugo_question = {
+Map kanji_question = {
   1: {
     "question": "以下のうち、「一石二鳥」の読み方はどれでしょう？",
     "choices": {1: "いっせきにうとり", 2: "いちせきにちょう", 3: "いせきにとり", 4: "いっせきにちょう"},
