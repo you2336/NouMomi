@@ -1,5 +1,5 @@
 {
-   "checksum": "9b9171b6bc9029348a3e8ad03b42d8cf",
+   "checksum": "95e90b76cbc10026190297920534c2de",
    "roots": {
       "bookmark_bar": {
          "children": [  ],
@@ -34,10 +34,21 @@
             "name": "localhost:63589",
             "type": "url",
             "url": "http://localhost:63589/"
+         }, {
+            "date_added": "13364979748116269",
+            "date_last_used": "0",
+            "guid": "a67bc230-aad0-42fe-8fda-0ed886d4d3c3",
+            "id": "9",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "localhost:59319",
+            "type": "url",
+            "url": "http://localhost:59319/"
          } ],
          "date_added": "13363420389235621",
          "date_last_used": "0",
-         "date_modified": "13364894090173601",
+         "date_modified": "13364979748116269",
          "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
          "id": "2",
          "name": "その他のブックマーク",

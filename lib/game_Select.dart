@@ -60,6 +60,6 @@ class Game_SelectState extends State<Game_Select> {
       button_back,
     ]));
 
-    return container;
+    return Material(child: container);
   }
 }

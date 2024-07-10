@@ -19,7 +19,11 @@ ListView createScoreTable() {
                   color: Colors.blue.withOpacity(0.2),
                   child: Row(
                     children: [
-                      Text('問${index + 1}'),
+                      Text('問${index + 1}',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 40,
+                          ))
                     ],
                   ),
                 ),
@@ -34,27 +38,31 @@ ListView createScoreTable() {
                   color: Colors.blue.withOpacity(0.2),
                   child: Row(
                     children: [
-                      Text('${result_Map[index]}'),
+                      Text('${result_Map[index]}',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 40,
+                          )),
                     ],
                   ),
                 ),
               ),
             ),
-            Expanded(
-              flex: 1,
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 2.0),
-                child: Container(
-                  height: 80,
-                  color: Colors.blue.withOpacity(0.2),
-                  child: const Row(
-                    children: [
-                      Text('空白'),
-                    ],
-                  ),
-                ),
-              ),
-            ),
+            // Expanded(
+            //   flex: 1,
+            //   child: Padding(
+            //     padding: const EdgeInsets.symmetric(horizontal: 2.0),
+            //     child: Container(
+            //       height: 80,
+            //       color: Colors.blue.withOpacity(0.2),
+            //       child: const Row(
+            //         children: [
+            //           Text('空白'),
+            //         ],
+            //       ),
+            //     ),
+            //   ),
+            // ),
           ],
         ),
       );

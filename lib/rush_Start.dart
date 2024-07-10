@@ -71,10 +71,8 @@ class Rush_StartState extends State<Rush_Start> {
       color: Color(mode_Color[mode]),
       child: Text(
         '${mode_kanji[mode]}ＲＵＳＨ',
-        style: TextStyle(
-          fontFamily: 'KleeOne',
-          color: Colors.black,
-        ),
+        style:
+            TextStyle(fontFamily: 'KleeOne', color: Colors.black, fontSize: 70),
       ),
     );
 
@@ -88,7 +86,8 @@ class Rush_StartState extends State<Rush_Start> {
                 Expanded(
                   flex: 1,
                   child: ElevatedButton(
-                      child: Text('１０問'),
+                      child: Text('１０問',
+                          style: TextStyle(color: Colors.black, fontSize: 30)),
                       onPressed: () {
                         setState(() {
                           button_push(10);
@@ -102,7 +101,8 @@ class Rush_StartState extends State<Rush_Start> {
                 Expanded(
                   flex: 1,
                   child: ElevatedButton(
-                      child: Text('２０問'),
+                      child: Text('２０問',
+                          style: TextStyle(color: Colors.black, fontSize: 30)),
                       onPressed: () {
                         setState(() {
                           button_push(20);
@@ -116,7 +116,8 @@ class Rush_StartState extends State<Rush_Start> {
                 Expanded(
                   flex: 1,
                   child: ElevatedButton(
-                      child: Text('３０問'),
+                      child: Text('３０問',
+                          style: TextStyle(color: Colors.black, fontSize: 30)),
                       onPressed: () {
                         setState(() {
                           button_push(30);
@@ -146,7 +147,8 @@ class Rush_StartState extends State<Rush_Start> {
                   Navigator.push(
                       context, MaterialPageRoute(builder: (context) => temp));
                 },
-                child: Text('スタート'),
+                child: Text('スタート',
+                    style: TextStyle(color: Colors.black, fontSize: 30)),
                 style: ElevatedButton.styleFrom(
                   minimumSize: Size(700, 100),
                   //shape: RoundedRectangleBorder()
@@ -155,7 +157,7 @@ class Rush_StartState extends State<Rush_Start> {
         onPressed: () {
           Navigator.pop(context);
         },
-        child: Text('戻る'),
+        child: Text('戻る', style: TextStyle(color: Colors.black, fontSize: 30)),
         style: ElevatedButton.styleFrom(
           minimumSize: Size(700, 100),
           //shape: RoundedRectangleBorder()
@@ -169,6 +171,8 @@ class Rush_StartState extends State<Rush_Start> {
       button_back,
     ]));
 
-    return container;
+    return Material(
+      child: container,
+    );
   }
 }

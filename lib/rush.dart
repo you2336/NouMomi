@@ -23,16 +23,14 @@ class Rush extends StatefulWidget {
 }
 
 class Rush_State extends State<Rush> {
-  dynamic test_fanction() {
-    debugPrint('777');
-  }
+  dynamic test_fanction() {}
 
   rush_Control() {
     setState(() {
-      print("$count_now");
-      print("${question_Map[question_Order[count_now]]?["answer"]}");
-      print("${question_Map[question_Order[count_now]]}");
-      print("$answer,${question_Map[question_Order[count_now]]?["answer"]}");
+      // print("$count_now");
+      // print("${question_Map[question_Order[count_now]]?["answer"]}");
+      // print("${question_Map[question_Order[count_now]]}");
+      // print("$answer,${question_Map[question_Order[count_now]]?["answer"]}");
       if (answer == question_Map[question_Order[count_now]]?["answer"]) {
         result_Map[count_now] = "〇";
         print("〇");
@@ -72,13 +70,24 @@ class Rush_State extends State<Rush> {
                 height: 200,
                 alignment: Alignment.center,
                 color: Color(mode_Color[mode]),
-                child: Text("第${count_now + 1}問")),
+                child: Text(
+                  "第${count_now + 1}問",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 50,
+                  ),
+                )),
             Container(
                 alignment: Alignment.center,
                 width: double.infinity,
                 height: 600,
-                child:
-                    Text(question_Map[question_Order[count_now]]?["question"])),
+                child: Text(
+                  question_Map[question_Order[count_now]]?["question"],
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 40,
+                  ),
+                )),
           ],
         )));
 
@@ -87,7 +96,13 @@ class Rush_State extends State<Rush> {
           answer = 1;
           rush_Control();
         },
-        child: Text(question_Map[question_Order[count_now]]?["choices"]?[1]),
+        child: Text(
+          question_Map[question_Order[count_now]]?["choices"]?[1],
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: 30,
+          ),
+        ),
         style: ElevatedButton.styleFrom(
             minimumSize: Size(700, 110), shape: RoundedRectangleBorder()));
     final choices2 = ElevatedButton(
@@ -95,7 +110,13 @@ class Rush_State extends State<Rush> {
           answer = 2;
           rush_Control();
         },
-        child: Text(question_Map[question_Order[count_now]]?["choices"]?[2]),
+        child: Text(
+          question_Map[question_Order[count_now]]?["choices"]?[2],
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: 30,
+          ),
+        ),
         style: ElevatedButton.styleFrom(
             minimumSize: Size(700, 110), shape: RoundedRectangleBorder()));
     final choices3 = ElevatedButton(
@@ -103,7 +124,13 @@ class Rush_State extends State<Rush> {
           answer = 3;
           rush_Control();
         },
-        child: Text(question_Map[question_Order[count_now]]?["choices"]?[3]),
+        child: Text(
+          question_Map[question_Order[count_now]]?["choices"]?[3],
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: 30,
+          ),
+        ),
         style: ElevatedButton.styleFrom(
             minimumSize: Size(700, 110), shape: RoundedRectangleBorder()));
     final choices4 = ElevatedButton(
@@ -111,7 +138,13 @@ class Rush_State extends State<Rush> {
           answer = 4;
           rush_Control();
         },
-        child: Text(question_Map[question_Order[count_now]]?["choices"]?[4]),
+        child: Text(
+          question_Map[question_Order[count_now]]?["choices"]?[4],
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: 30,
+          ),
+        ),
         style: ElevatedButton.styleFrom(
             minimumSize: Size(700, 110), shape: RoundedRectangleBorder()));
 
@@ -134,6 +167,6 @@ class Rush_State extends State<Rush> {
 
     var All_w = Container(child: Row(children: [left_w, right_w]));
 
-    return All_w;
+    return Material(child: All_w);
   }
 }

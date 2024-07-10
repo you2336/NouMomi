@@ -15,14 +15,10 @@ class Result extends StatefulWidget {
 }
 
 class Result_State extends State<Result> {
-  dynamic test_fanction() {
-    debugPrint('777');
-  }
-
   @override
   Widget build(BuildContext context) {
-    print("count_limit$count_limit");
-    print(result_Map);
+    // print("count_limit$count_limit");
+    // print(result_Map);
     var score_Percent = ((score_Count / count_limit) * 100).round();
 
     var left_w = Expanded(
@@ -36,16 +32,26 @@ class Result_State extends State<Result> {
                   height: 200,
                   alignment: Alignment.center,
                   color: Color(mode_Color[mode]),
-                  child: Text(
-                      "${mode_kanji[mode]}ＲＵＳＨ${count_limit.toString()}問")),
+                  child:
+                      Text("${mode_kanji[mode]}ＲＵＳＨ${count_limit.toString()}問",
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 40,
+                          ))),
               Container(
                   child: Column(
                 children: [
-                  Text("正解率"),
-                  Text("$score_Count問／$count_limit問"),
-                  Text("$score_Percent%"),
-                  Text(" "),
-                  Text("お疲れさまでした。"),
+                  Text(
+                    """正解率\n
+                  $score_Count問／$count_limit問\n
+                  $score_Percent%\n
+                  \n
+                  お疲れさまでした。\n\n\n""",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 40,
+                    ),
+                  ),
                 ],
               ))
             ])));
@@ -73,6 +79,6 @@ class Result_State extends State<Result> {
             )));
 
     var All_w = Container(child: Row(children: [left_w, right_w]));
-    return All_w;
+    return Material(child: All_w);
   }
 }
