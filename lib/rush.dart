@@ -3,6 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:project1/game_Select.dart';
 import 'package:project1/result.dart';
 import 'package:project1/rush_Start.dart';
+import 'package:project1/widgets/AnswerDialog.dart';
 //import 'package:project1/questions/juk_question.dart';
 import 'package:project1/rush_Control.dart';
 
@@ -25,7 +26,19 @@ class Rush extends StatefulWidget {
 class Rush_State extends State<Rush> {
   dynamic test_fanction() {}
 
-  rush_Control() {
+  rush_Control() async {
+    await showDialog(
+      context: context,
+      builder: (_) => AnswerDialog(
+          title: "第${count_now + 1}問",
+          question: question_Map[question_Order[count_now]]?["question"],
+          selectAnswer_num: answer,
+          selectAnswer: question_Map[question_Order[count_now]]?["choices"]
+              ?[answer],
+          truthAnswer: question_Map[question_Order[count_now]]?["answer"],
+          answerSent: question_Map[question_Order[count_now]]?["choices"]
+              ?[question_Map[question_Order[count_now]]?["answer"]]),
+    );
     setState(() {
       // print("$count_now");
       // print("${question_Map[question_Order[count_now]]?["answer"]}");

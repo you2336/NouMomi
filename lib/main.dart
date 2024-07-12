@@ -1,8 +1,9 @@
-import 'dart:ui_web';
+// import 'dart:ui_web';
 import 'package:flutter/material.dart';
 import 'package:project1/game_Select.dart';
 import 'package:project1/rush_Control.dart';
-import 'package:audioplayers/audioplayers.dart';
+import 'package:project1/widgets/AnswerDialog.dart';
+// import 'package:audioplayers/audioplayers.dart';
 
 void main() {
   runApp(MyApp());
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatelessWidget {
-  final audioPlayer = AudioPlayer();
+  //final audioPlayer = AudioPlayer();
   void test_function() {
     print('記録閲覧ボタンが押されました');
   }
@@ -52,7 +53,12 @@ class MyHomePage extends StatelessWidget {
       ),
     );
     final button_Record = ElevatedButton(
-      onPressed: test_function,
+      onPressed: () {
+        // showDialog(
+        //   context: context,
+        //   builder: (_) => AnswerDialog(),
+        // );
+      },
       child: Text('記録閲覧',
           textScaleFactor: 3.0,
           style: TextStyle(

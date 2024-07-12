@@ -310,7 +310,7 @@ Map rika_question = {
     "answer": 3
   },
   32: {
-    "question": "問題文ない",
+    "question": "塩化ナトリウムが含まれるのは？",
     "choices": {
       1: "普通の水",
       2: "砂糖水",

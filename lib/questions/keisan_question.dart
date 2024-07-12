@@ -49,7 +49,7 @@ Map keisan_question = {
       3: "400",
       4: "450",
     },
-    "answer": 300,
+    "answer": 1,
   },
   6: {
     "question": "190 - 45 = ",
@@ -220,7 +220,7 @@ Map keisan_question = {
       3: "4.8",
       4: "5.1",
     },
-    "answer": 4.8,
+    "answer": 3,
   },
   28: {
     "question": "45+37=",
@@ -255,7 +255,7 @@ Map keisan_question = {
   32: {
     "question": "58 + 64 = ",
     "choices": {1: "112", 2: "122", 3: "132", 4: "142"},
-    "answer": 3
+    "answer": 2
   },
   33: {
     "question": "200 - 123 = ",
