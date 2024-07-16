@@ -89,7 +89,7 @@ class Rush_State extends State<Rush> {
                     "第${count_now + 1}問",
                     style: TextStyle(
                       color: Colors.black,
-                      fontSize: 50,
+                      fontSize: 80,
                     ),
                   )),
             ),
@@ -98,13 +98,14 @@ class Rush_State extends State<Rush> {
               child: Container(
                   alignment: Alignment.center,
                   width: double.infinity,
+                  padding: EdgeInsets.all(50),
                   //color: Color(mode_Color[mode]),
                   //height: 600,
                   child: Text(
                     question_Map[question_Order[count_now]]?["question"],
                     style: TextStyle(
                       color: Colors.black,
-                      fontSize: 30,
+                      fontSize: 40,
                     ),
                   )),
             ),
@@ -120,7 +121,7 @@ class Rush_State extends State<Rush> {
           question_Map[question_Order[count_now]]?["choices"]?[1],
           style: TextStyle(
             color: Colors.black,
-            fontSize: 30,
+            fontSize: 40,
           ),
         ),
         style: ElevatedButton.styleFrom(
@@ -134,7 +135,7 @@ class Rush_State extends State<Rush> {
           question_Map[question_Order[count_now]]?["choices"]?[2],
           style: TextStyle(
             color: Colors.black,
-            fontSize: 30,
+            fontSize: 40,
           ),
         ),
         style: ElevatedButton.styleFrom(
@@ -148,7 +149,7 @@ class Rush_State extends State<Rush> {
           question_Map[question_Order[count_now]]?["choices"]?[3],
           style: TextStyle(
             color: Colors.black,
-            fontSize: 30,
+            fontSize: 40,
           ),
         ),
         style: ElevatedButton.styleFrom(
@@ -162,7 +163,7 @@ class Rush_State extends State<Rush> {
           question_Map[question_Order[count_now]]?["choices"]?[4],
           style: TextStyle(
             color: Colors.black,
-            fontSize: 30,
+            fontSize: 40,
           ),
         ),
         style: ElevatedButton.styleFrom(

@@ -43,7 +43,7 @@ button_push(int num) {
     bnt10 = offButtonColor;
     bnt20 = offButtonColor;
     bnt30 = onButtonColor;
-  } //花王
+  }
 }
 
 class Rush_Start extends StatefulWidget {
@@ -135,15 +135,16 @@ class Rush_StartState extends State<Rush_Start> {
 
     final button_start = Flexible(
         child: Padding(
-            padding: EdgeInsets.all(30),
+            padding: EdgeInsets.all(40),
             child: ElevatedButton(
                 onPressed: () {
                   map_Init();
+                  init(mode);
                   var temp = Rush();
-                  print("777");
-                  print(question_Order);
-                  print("$question_Order:$count_now");
-                  print(question_Map[question_Order[count_now]]);
+                  // print("777");
+                  // print(question_Order);
+                  // print("$question_Order:$count_now");
+                  // print(question_Map[question_Order[count_now]]);
                   Navigator.push(
                       context, MaterialPageRoute(builder: (context) => temp));
                 },

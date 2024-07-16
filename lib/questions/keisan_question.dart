@@ -54,7 +54,7 @@ Map keisan_question = {
   6: {
     "question": "190 - 45 = ",
     "choices": {1: "145", 2: "146", 3: "147", 4: "148"},
-    "answer": 2
+    "answer": 1,
   },
   7: {
     "question": "44×11＝？",
@@ -160,7 +160,7 @@ Map keisan_question = {
   20: {
     "question": "43 + 29 = ",
     "choices": {1: "71", 2: "72", 3: "73", 4: "74"},
-    "answer": 3
+    "answer": 2
   },
   21: {
     "question": "5+21-6=",
@@ -240,7 +240,7 @@ Map keisan_question = {
       3: "55",
       4: "65",
     },
-    "answer": 3,
+    "answer": 2,
   },
   30: {
     "question": "15 × 8 = ",
@@ -260,7 +260,7 @@ Map keisan_question = {
   33: {
     "question": "200 - 123 = ",
     "choices": {1: "67", 2: "77", 3: "87", 4: "97"},
-    "answer": 3
+    "answer": 2
   },
   34: {
     "question": "96 ÷ 8 = ",
@@ -270,12 +270,12 @@ Map keisan_question = {
   35: {
     "question": "27 + 54 = ",
     "choices": {1: "71", 2: "81", 3: "91", 4: "101"},
-    "answer": 3
+    "answer": 2
   },
   36: {
     "question": "132 - 56 = ",
     "choices": {1: "66", 2: "76", 3: "86", 4: "96"},
-    "answer": 3
+    "answer": 2
   },
   37: {
     "question": "32 + 47 = ",
@@ -295,7 +295,7 @@ Map keisan_question = {
   40: {
     "question": "132 ÷ 11 = ",
     "choices": {1: "10", 2: "11", 3: "12", 4: "13"},
-    "answer": 2
+    "answer": 3
   },
   41: {
     "question": "76 + 29 = ",
@@ -320,12 +320,12 @@ Map keisan_question = {
   45: {
     "question": "63 + 48 = ",
     "choices": {1: "110", 2: "111", 3: "112", 4: "113"},
-    "answer": 3
+    "answer": 2
   },
   46: {
     "question": "145 - 67 = ",
     "choices": {1: "76", 2: "77", 3: "78", 4: "79"},
-    "answer": 4
+    "answer": 3
   },
   47: {
     "question": "11 × 8 = ",
