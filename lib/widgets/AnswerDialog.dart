@@ -30,27 +30,41 @@ class _AnswerDialogState extends State<AnswerDialog> {
     if (widget.selectAnswer == widget.truthAnswer) {
       widget.isCorrect = '正　解';
     }
-    return AlertDialog(
-      title: Text(widget.title),
-      content: Column(mainAxisSize: MainAxisSize.min, children: [
-        Text(""
-                "＜問題＞\n" +
-            "${widget.question}\n" +
-            "\n" +
-            "＜あなたの回答＞\n" +
-            "${widget.selectAnswer_num}：${widget.selectAnswer}\n" +
-            "\n" +
-            "＜正しい　回答＞\n" +
-            "${widget.truthAnswer}：${widget.answerSent}"),
-      ]),
-      actions: [
-        TextButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: Text('閉じる'),
-        )
-      ],
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: AlertDialog(
+        title: Text(
+          widget.title,
+          style: TextStyle(fontSize: 45),
+        ),
+        content: Column(mainAxisSize: MainAxisSize.min, children: [
+          SizedBox(
+            height: 25,
+          ),
+          Text(
+            ""
+                    "＜問題＞\n" +
+                "${widget.question}\n" +
+                "\n" +
+                "＜あなたの回答＞\n" +
+                "${widget.selectAnswer_num}：${widget.selectAnswer}\n" +
+                "\n" +
+                "＜正しい　回答＞\n" +
+                "${widget.truthAnswer}：${widget.answerSent}",
+            style: TextStyle(fontSize: 30),
+          ),
+        ]),
+        actions: [
+          TextButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: Text(
+                '閉じる',
+                style: TextStyle(fontSize: 30),
+              ))
+        ],
+      ),
     );
   }
 }

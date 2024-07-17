@@ -6,9 +6,9 @@ import 'package:project1/widgets/game_Select_Button.dart';
 class Game_Select extends StatefulWidget {
   Game_Select({super.key});
 
-  dynamic test_fanction() {
-    debugPrint('777');
-  }
+  // dynamic test_fanction() {
+  //   debugPrint('777');
+  // }
 
   Game_SelectState createState() => Game_SelectState();
 }
@@ -35,29 +35,46 @@ class Game_SelectState extends State<Game_Select> {
 
     final container = Container(
         child: Column(children: [
-      SizedBox(
-        height: 70,
+      Flexible(
+        flex: 1,
+        child: SizedBox(
+          height: 70,
+        ),
       ),
-      Padding(
-        padding: const EdgeInsets.symmetric(vertical: 25.0),
-        child: GameSelectButton(buttonMode: "kanji", onPressed: f),
+      Flexible(
+        flex: 1,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 25.0),
+          child: GameSelectButton(buttonMode: "kanji", onPressed: f),
+        ),
       ),
-      Padding(
-        padding: const EdgeInsets.symmetric(vertical: 25.0),
-        child: GameSelectButton(buttonMode: "keisan", onPressed: f),
+      Flexible(
+        flex: 1,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 25.0),
+          child: GameSelectButton(buttonMode: "keisan", onPressed: f),
+        ),
       ),
-      Padding(
-        padding: const EdgeInsets.symmetric(vertical: 25.0),
-        child: GameSelectButton(buttonMode: "rika", onPressed: f),
-      ),
-      Padding(
-        padding: const EdgeInsets.symmetric(vertical: 25.0),
-        child: GameSelectButton(buttonMode: "shakai", onPressed: f),
+      Flexible(
+          flex: 1,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 25.0),
+            child: GameSelectButton(buttonMode: "rika", onPressed: f),
+          )),
+      Flexible(
+        flex: 1,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 25.0),
+          child: GameSelectButton(buttonMode: "shakai", onPressed: f),
+        ),
       ),
       SizedBox(
         height: 50,
       ),
-      button_back,
+      Flexible(
+        flex: 1,
+        child: button_back,
+      ),
     ]));
 
     return Material(child: container);

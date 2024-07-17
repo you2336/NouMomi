@@ -27,30 +27,34 @@ class Result_State extends State<Result> {
             child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-              Container(
-                  width: double.infinity,
-                  height: 200,
-                  alignment: Alignment.center,
-                  color: Color(mode_Color[mode]),
-                  child:
-                      Text("${mode_kanji[mode]}ＲＵＳＨ${count_limit.toString()}問",
+              Flexible(
+                  flex: 1,
+                  child: Container(
+                      width: double.infinity,
+                      height: 200,
+                      alignment: Alignment.center,
+                      color: Color(mode_Color[mode]),
+                      child: Text(
+                          "${mode_kanji[mode]}ＲＵＳＨ${count_limit.toString()}問",
                           style: TextStyle(
                             color: Colors.black,
                             fontSize: 40,
-                          ))),
-              Container(
-                  child: Column(
-                children: [
-                  Text(
-                    "正解率\n\n$score_Count問／$count_limit問\n\n$score_Percent%\n\n\nお疲れさまでした。\n\n\n",
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 40,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                ],
-              ))
+                          )))),
+              Flexible(
+                  flex: 1,
+                  child: Container(
+                      child: Column(
+                    children: [
+                      Text(
+                        "正解率\n\n$score_Count問／$count_limit問\n\n$score_Percent%\n\n\nお疲れさまでした。\n\n\n",
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 40,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                    ],
+                  )))
             ])));
 
     var toTitleButton = ElevatedButton(

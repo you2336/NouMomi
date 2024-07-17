@@ -139,7 +139,10 @@ class Rush_StartState extends State<Rush_Start> {
             child: ElevatedButton(
                 onPressed: () {
                   map_Init();
-                  init(mode);
+                  count_now = 0;
+                  count_limit = 10;
+                  score_Count = 0;
+                  //init(mode);
                   var temp = Rush();
                   // print("777");
                   // print(question_Order);
