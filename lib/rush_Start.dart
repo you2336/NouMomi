@@ -72,7 +72,7 @@ class Rush_StartState extends State<Rush_Start> {
       child: Text(
         '${mode_kanji[mode]}ＲＵＳＨ',
         style:
-            TextStyle(fontFamily: 'KleeOne', color: Colors.black, fontSize: 70),
+            TextStyle(fontFamily: 'KleeOne', color: Colors.black, fontSize: 40),
       ),
     );
 

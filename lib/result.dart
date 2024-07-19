@@ -5,6 +5,7 @@ import 'package:project1/main.dart';
 // import 'package:project1/rush_Start.dart';
 import 'package:project1/rush_Control.dart';
 import 'package:project1/result_Table.dart';
+import 'package:project1/widgets/resultWidget.dart';
 
 class Result extends StatefulWidget {
   int a = 0;
@@ -25,13 +26,13 @@ class Result_State extends State<Result> {
         flex: 1,
         child: Container(
             child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                //mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
               Flexible(
                   flex: 1,
                   child: Container(
                       width: double.infinity,
-                      height: 200,
+                      height: 220,
                       alignment: Alignment.center,
                       color: Color(mode_Color[mode]),
                       child: Text(
@@ -41,22 +42,22 @@ class Result_State extends State<Result> {
                             fontSize: 40,
                           )))),
               Flexible(
-                  flex: 1,
+                  flex: 3,
                   child: Container(
                       child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Text(
-                        "正解率\n\n$score_Count問／$count_limit問\n\n$score_Percent%\n\n\nお疲れさまでした。\n\n\n",
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 40,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
+                      Flexible(flex: 1, child: Container()),
+                      resultButton(flexPoint: 1, text: "正解率"),
+                      resultButton(
+                          flexPoint: 1, text: "$score_Count問／$count_limit問"),
+                      resultButton(flexPoint: 1, text: "$score_Percent%"),
+                      resultButton(flexPoint: 1, text: "お疲れさまでした。"),
+                      Flexible(flex: 1, child: Container()),
                     ],
                   )))
             ])));
-
+//"正解率\n\n$score_Count問／$count_limit問\n\n$score_Percent%\n\n\nお疲れさまでした。\n\n\n"
     var toTitleButton = ElevatedButton(
         onPressed: () {
           Navigator.push(

@@ -80,7 +80,7 @@ class MyHomePage extends StatelessWidget {
         SizedBox(
           height: 50,
         ),
-        button_Record,
+        //button_Record,
       ],
     );
 
