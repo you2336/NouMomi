@@ -3,7 +3,6 @@ import 'package:project1/questions/kanji_question.dart';
 import 'package:project1/questions/keisan_question.dart';
 import 'package:project1/questions/rika_question.dart';
 import 'package:project1/questions/shakai_question.dart';
-import 'dart:math' as math;
 
 String mode = "kanji"; //どのゲームか
 Map mode_Color = {

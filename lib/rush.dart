@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:project1/game_Select.dart';
+// import 'package:project1/game_Select.dart';
 import 'package:project1/result.dart';
-import 'package:project1/rush_Start.dart';
+// import 'package:project1/rush_Start.dart';
 import 'package:project1/widgets/AnswerDialog.dart';
 //import 'package:project1/questions/juk_question.dart';
 import 'package:project1/rush_Control.dart';
@@ -40,10 +40,6 @@ class Rush_State extends State<Rush> {
               ?[question_Map[question_Order[count_now]]?["answer"]]),
     );
     setState(() {
-      // print("$count_now");
-      // print("${question_Map[question_Order[count_now]]?["answer"]}");
-      // print("${question_Map[question_Order[count_now]]}");
-      // print("$answer,${question_Map[question_Order[count_now]]?["answer"]}");
       if (answer == question_Map[question_Order[count_now]]?["answer"]) {
         result_Map[count_now] = "〇";
         print("〇");
@@ -67,11 +63,6 @@ class Rush_State extends State<Rush> {
 
   @override
   Widget build(BuildContext context) {
-    // print(map);
-    // print(map[count]);
-    // print(map[count]?["question"].runtimeType);
-    // print((map[count]?["choices"]?[1].runtimeType));
-
     var left_w = Expanded(
         flex: 1,
         child: Container(

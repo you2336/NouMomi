@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:project1/rush_Start.dart';
-import 'package:project1/rush_Control.dart';
+// import 'package:project1/rush_Start.dart';
+// import 'package:project1/rush_Control.dart';
 import 'package:project1/widgets/game_Select_Button.dart';
 
 class Game_Select extends StatefulWidget {
@@ -30,8 +30,7 @@ class Game_SelectState extends State<Game_Select> {
             textAlign: TextAlign.center),
         style: ElevatedButton.styleFrom(
             minimumSize: Size(400, 90), shape: RoundedRectangleBorder()));
-    void f() {}
-    ;
+    void f() {};
 
     final container = Container(
         child: Column(children: [
